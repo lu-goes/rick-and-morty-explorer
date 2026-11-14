@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore personagens, espécies e dimensões do universo Rick and Morty.">
+  <title>Rick & Morty Explorer</title>
+  <link rel="preconnect" href="https://rickandmortyapi.com">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Rick and Morty Explorer - início">
+      <span class="brand-mark">R<span>✦</span>M</span>
+      <span class="brand-name">MULTIVERSE<span>EXPLORER</span></span>
+    </a>
+    <nav class="navigation" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#sobre">Sobre a API</a>
+    </nav>
+    <a class="api-status" href="https://rickandmortyapi.com/documentation" target="_blank" rel="noopener">
+      <span class="status-dot"></span> API conectada
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ACESSO AUTORIZADO AO MULTIVERSO</p>
+        <h1>Explore o<br><em>infinito.</em></h1>
+        <p class="hero-description">Uma viagem por dimensões, espécies e personagens do universo de Rick and Morty. Os dados são carregados diretamente da API.</p>
+        <a class="primary-button" href="#personagens">Explorar personagens <span>↘</span></a>
+        <div class="hero-footnote"><span class="tiny-star">✦</span> DADOS DINÂMICOS · API REST · JAVASCRIPT</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração temática de portal interdimensional">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="portal"><div class="portal-core"></div><span class="portal-label">DIMENSION C-137</span></div>
+        <div class="floating-card float-top"><span class="mini-dot"></span> MULTIVERSE ONLINE</div>
+        <div class="floating-card float-bottom">REALIDADE <strong>∞</strong></div>
+        <div class="hero-coordinates">40° 26' 46.2" N<br>79° 58' 56.1" W</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Estatísticas do universo">
+      <div class="stat-item"><span class="stat-icon">✧</span><div><strong id="stat-characters">—</strong><small>PERSONAGENS</small></div></div>
+      <div class="stat-item"><span class="stat-icon">⌖</span><div><strong id="stat-locations">—</strong><small>LOCALIZAÇÕES</small></div></div>
+      <div class="stat-item"><span class="stat-icon">▤</span><div><strong id="stat-episodes">—</strong><small>EPISÓDIOS</small></div></div>
+      <div class="stat-note">INFORMAÇÕES<br><b>ATUALIZADAS VIA API</b></div>
+    </section>
+
+    <section class="characters-section" id="personagens">
+      <div class="section-heading">
+        <div><p class="eyebrow">ARQUIVO INTERDIMENSIONAL / 001</p><h2>Encontre seu <em>personagem.</em></h2></div>
+        <p class="section-intro">Pesquise e descubra informações dos habitantes do multiverso.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Buscar personagem..." autocomplete="off"><kbd>ENTER</kbd></label>
+        <label class="filter-label">STATUS
+          <select id="status-filter">
+            <option value="">Todos</option><option value="alive">Vivo</option><option value="dead">Morto</option><option value="unknown">Desconhecido</option>
+          </select>
+        </label>
+        <button class="reset-button" id="reset-button" type="button">Limpar filtros ↺</button>
+      </div>
+
+      <div class="results-line"><span id="results-message">Carregando arquivos...</span><span id="page-indicator"></span></div>
+      <div class="character-grid" id="character-grid" aria-live="polite">
+        <div class="loading-state"><div class="loader"></div><p>Estabelecendo conexão interdimensional...</p></div>
+      </div>
+      <div class="pagination">
+        <button id="prev-button" class="page-button" type="button" disabled>← Anterior</button>
+        <span id="pagination-label">Página 1</span>
+        <button id="next-button" class="page-button" type="button" disabled>Próxima →</button>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-symbol">⌘</div>
+      <div><p class="eyebrow">TECNOLOGIA POR TRÁS DA VIAGEM</p><h2>O multiverso em <em>tempo real.</em></h2>
+      <p>Este projeto utiliza JavaScript para consumir a Rick and Morty API por meio de requisições HTTP. Os personagens são recebidos em formato JSON e inseridos dinamicamente na página, sem cards previamente escritos no HTML.</p>
+      <a href="https://rickandmortyapi.com/documentation" target="_blank" rel="noopener">Consultar documentação oficial ↗</a></div>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#inicio">R<span>✦</span>M EXPLORER</a><span>PROJETO ACADÊMICO · HTML · CSS · JAVASCRIPT</span><span>© 2026</span></footer>
+</body>
+</html>
